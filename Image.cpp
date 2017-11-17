@@ -25,14 +25,14 @@ void Image::setSnap(byte *snapshot) {
 void Image::Imgload(byte *snapshot) {
 	//std::cout << static_cast<unsigned short>(r) << std::endl;
 	for (int i = 0; i < 3;  i++) {
-		for (int h = 0; h < 480; ++h) {
-			for (int k = 0; k < 720; ++k) {
+		for (int h = 0; h < 480; h++) {
+			for (int k = 0; k < 720; k++) {
 				rgbofSnap[k * h * i] = static_cast<unsigned short>(snapshot[k * h * i]);
 			}
 		}
 	}
 	/*
-	for (int i = 0; i < 720 * 480; ++i) {
+	for (int i = 0; i < 720 * 480; i++) {
 		rgbofSnap[i] = static_cast<unsigned short>(snapshot[i]); 
 	}
 	*/
